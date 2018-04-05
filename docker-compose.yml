@@ -1,0 +1,12 @@
+version: '3'
+services:
+  product:
+    build: ./Detail
+    ports:
+      - '8000:8000'
+
+  search:
+    build: ./Search
+    ports:
+      - '9000:8000'
+

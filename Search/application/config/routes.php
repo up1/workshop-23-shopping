@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 $route['default_controller'] = 'search';
-$route['keyword/(:any)'] = 'public/search/index/$1';
+$route['(:any)'] = 'search/search_product/$1';
+// $route['(:any)'] = 'public/search/index/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
