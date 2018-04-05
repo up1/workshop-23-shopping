@@ -1,4 +1,5 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class MY_Controller extends CI_Controller {
 	function _echo_json($status, $data=array(), $msg=array(), $is_array = FALSE){
@@ -12,4 +13,5 @@ class MY_Controller extends CI_Controller {
 
 		return $status;
 	}
+	
 }
