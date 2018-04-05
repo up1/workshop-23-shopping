@@ -10,20 +10,27 @@ class Search extends MY_Controller {
 
 	function search_product () {
 		$keyword = $this->input->get('keyword');
+
+		if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $keyword)) {
+			return $this->_echo_json('1001', array(), 'invalidate keyword');
+		}
+
 		if (!empty($keyword)) {
 			$this->load->helper('file');
-			// $path_json = ;
-			// print_r(APPPATH.'../'.$path_json);die();
+			$path_json = '../asset/product_keyword.json';
+			$product_json = json_decode(file_get_contents(APPPATH.$path_json));
 			$product_list = array();
-			$product_json = file_get_contents('/asset/product_keyword.json');
-
-			foreach ($product_json as $product) {
-				$a_keyword = explode($product['keyword'], ',');
-				if (array_search($keyword, $a_keyword)) {
-					array_push($product_list, $product['id']);
+			foreach ($product_json->product as $keyProduct => $product) {
+				$a_keyword = explode(',', $product->keyword);
+				if (array_search($keyword, $a_keyword) > -1) {
+					array_push($product_list, $product->id);
 				}
 			}
 		}
-		print_r($product_list);
+
+		if(empty($product_list)) {
+			return $this->_echo_json('5001', array(), 'not found');
+		}
+		return $this->_echo_json('200', $product_list, 'success');
 	}
 }
