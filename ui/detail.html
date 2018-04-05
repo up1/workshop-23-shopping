@@ -1,87 +1,105 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <main role="main">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	  crossorigin="anonymous">
 
-      <div class="album py-5 bg-light">
-        <div class="container">
-			<div class="row">
-				<div class="col-12"><h1 id="name">xxxxx</h1></div>	
-			</div>
-			<div class="row">
-				<div class="col-4">images</div>			 
-				<div class="col-8"><img id="img" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16295065a32%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16295065a32%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.45000076293945%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true"></div> 
-			</div>
-			<div class="row">
-				<div class="col-4">price</div>			 
-				<div class="col-8" id="price">yyyyyyy</div> 
-			</div>
-			<div class="row">
-				<div class="col-4">detail</div>			 
-				<div class="col-8" id="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div> 
-			</div>
-			
-			<div class="row">
-				<div class="col-12">
-					<button id="btn_addCard" type="button" class="btn btn-primary" onclick="addCard()"> add to Card
+	<title>Hello, world!</title>
+</head>
+
+<body>
+	<main role="main">
+
+		<div class="album py-5 bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h1 id="name">xxxxx</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4">images</div>
+					<div class="col-8">
+						<img id="img" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+						  alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16295065a32%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16295065a32%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.45000076293945%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+						  data-holder-rendered="true">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4">price</div>
+					<div class="col-8" id="price">yyyyyyy</div>
+				</div>
+				<div class="row">
+					<div class="col-4">detail</div>
+					<div class="col-8" id="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+						dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+						book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+						unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+						more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+				</div>
+
+				<div class="row">
+					<div class="col-12">
+						<button id="btn_addCard" type="button" class="btn btn-primary" onclick="addCard()"> add to Card
+					</div>
 				</div>
 			</div>
-        </div>
-      </div>
+		</div>
 
-    </main>
+	</main>
 
-    <!-- Optional JavaScript -->
-     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-	
-	
-	    <script>
-		$(function() {
-  get_data()
-});
-function get_data () {
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 
-$.ajax({
-  method: "GET",
-  dataType: "json",
-  url: "http://api-bluefalo.23perspective.com/main/news_detail?news_id=18"
-})
-  .done(function( msg ) {
-  
-	if(msg.result.length >0){
-		
-		$("#name").html(msg.result[0].news_name_en);
-		$("#img").attr('src',msg.result[0].news_cover);
-		$("#price").html('');
-		$("#detail").html(msg.result[0].news_detail_en);
-  }else{  
-	html += '<div class="row">';
-	html += '<div class="col-md-12"><h1>Content not found</h1></div>'
-	html += '</div>';
-	$("#result").html(html);
-  }  
-});
-		
-		
+
+	<script>
+		$(function () {
+			get_data()
+		});
+		function getParameterByName(name, url) {
+			if (!url) url = window.location.href;
+			name = name.replace(/[\[\]]/g, "\\$&");
+			var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+					results = regex.exec(url);
+			if (!results) return null;
+			if (!results[2]) return '';
+			return decodeURIComponent(results[2].replace(/\+/g, " "));
 		}
-		function addCard(){
-		alert('You Click addCard');
+		function get_data() {
+			var id = getParameterByName('id');
+			$.ajax({
+					method: "GET",
+					dataType: "json",
+					url: "http://api-bluefalo.23perspective.com/main/news_detail?news_id=18"
+			// 	url: "http://api-bluefalo.23perspective.com/main/news_detail?news_id=" + id
+				})
+				.done(function (msg) {
+					if (msg.result.length > 0) {
+						$("#name").html(msg.result[0].news_name_en);
+						$("#img").attr('src', msg.result[0].news_cover);
+						$("#price").html('');
+						$("#detail").html(msg.result[0].news_detail_en);
+					} else {
+						html += '<div class="row">';
+						html += '<div class="col-md-12"><h1>Content not found</h1></div>'
+						html += '</div>';
+						$("#result").html(html);
+					}
+				});
 		}
-      </script>
-		
-	
-	
-	
-  </body>
+
+		function addCard() {
+			alert('You Click addCard');
+		}
+	</script>
+
+</body>
+
 </html>
