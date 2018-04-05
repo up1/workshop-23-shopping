@@ -1,9 +1,24 @@
-# I recommend you remove `IfModule`. Because if you need mod_rewrite,
-# you don't need `IfModule`. If you don't need it, you don't need this file
-# at all.
-<IfModule mod_rewrite.c>
+SetOutputFilter DEFLATE
+SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ \
+no-gzip dont-vary
+SetEnvIfNoCase Request_URI \
+\.(?:exe|t?gz|zip|bz2|sit|rar)$ \
+no-gzip dont-vary
+SetEnvIfNoCase Request_URI \.pdf$ no-gzip dont-vary
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
 RewriteEngine On
+
+#Remove comment below line if you try to access with xxx.yyy.www.zzz/~aaaa/
+#RewriteBase   /~aaa
+
+RewriteRule ^~beta/(.*)$ system/application/modules/$1 [L]
+RewriteRule ^~alpha/(.*)$ system/application/$1 [L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [L]
-</IfModule>
+
+
