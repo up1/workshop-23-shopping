@@ -8,11 +8,12 @@ class Search extends MY_Controller {
 		$this->load->view('welcome_message');
 	}
 
-	function search () {
+	function search_product () {
 		$keyword = $this->input->get('keyword');
 		if (!empty($keyword)) {
 			$this->load->helper('file');
-			// $path_json = BASEPATH;
+			// $path_json = ;
+			// print_r(APPPATH.'../'.$path_json);die();
 			$product_list = array();
 			$product_json = file_get_contents('/asset/product_keyword.json');
 
