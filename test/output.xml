@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180405 17:35:32.115" generator="Robot 3.0.2 (Python 2.7.10 on darwin)">
+<suite source="/Users/beer/Desktop/workshop_23shopping/test/smart.robot" id="s1" name="Smart">
+<test id="s1-t1" name="ทดสอบ">
+<kw name="เปิด Browser ไปที่ 23-Shopping">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://airmosphere.net/</arg>
+<arg>browser=chrome</arg>
+</arguments>
+<msg timestamp="20180405 17:35:32.207" level="INFO">Opening browser 'chrome' to base url 'http://airmosphere.net/'.</msg>
+<status status="PASS" endtime="20180405 17:35:35.385" starttime="20180405 17:35:32.207"></status>
+</kw>
+<status status="PASS" endtime="20180405 17:35:35.386" starttime="20180405 17:35:32.206"></status>
+</kw>
+<kw name="test">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="grid"]/div[1]/a[1]</arg>
+</arguments>
+<msg timestamp="20180405 17:35:35.387" level="INFO">Clicking element 'xpath=//*[@id="grid"]/div[1]/a[1]'.</msg>
+<status status="PASS" endtime="20180405 17:35:37.093" starttime="20180405 17:35:35.386"></status>
+</kw>
+<status status="PASS" endtime="20180405 17:35:37.093" starttime="20180405 17:35:35.386"></status>
+</kw>
+<status status="PASS" endtime="20180405 17:35:37.093" critical="yes" starttime="20180405 17:35:32.206"></status>
+</test>
+<status status="PASS" endtime="20180405 17:35:37.094" starttime="20180405 17:35:32.118"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Smart" pass="1">Smart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -10,3 +10,7 @@ services:
     ports:
       - '9000:8000'
 
+  ui:
+    build: ./ui
+    ports:
+      - '80:80'
