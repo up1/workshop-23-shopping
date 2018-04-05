@@ -8,8 +8,8 @@ class Search extends MY_Controller {
 		$this->load->view('welcome_message');
 	}
 
-	function search_product () {
-		$keyword = $this->input->get('keyword');
+	function search_product ($keyword = '') {
+		// $keyword = $this->input->get('keyword');
 
 		if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $keyword)) {
 			return $this->_echo_json('1001', array(), 'invalidate keyword');
